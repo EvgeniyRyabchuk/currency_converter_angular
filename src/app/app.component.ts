@@ -26,28 +26,26 @@ export class AppComponent {
       {
         // @ts-ignore
         let value:number = Object.values(res)[0] * this.inputValue;
-        this.result = parseFloat(value.toFixed(4)); 
+        this.result = parseFloat(value.toFixed(4));
         console.log(this.result);
       });
     }
-
-
   }
 
 
-  public getValue()
-  {
-    this.converterService.getCurrentRate({from: 'UAH', to: 'USD'}).subscribe((res: any) =>
-    {
-      // @ts-ignore
-      let value = Object.values(res)[0] * this.inputValue;
-      this.result = parseFloat(value.toFixed(4));
-
-      console.log(this.result);
-      // console.log(10 * this.value)
-      // console.log(res.key + " " + res.value);
-    });
-  }
+  // public getValue()
+  // {
+  //   this.converterService.getCurrentRate({from: 'UAH', to: 'USD'}).subscribe((res: any) =>
+  //   {
+  //     // @ts-ignore
+  //     let value = Object.values(res)[0] * this.inputValue;
+  //     this.result = parseFloat(value.toFixed(4));
+  //
+  //     console.log(this.result);
+  //     // console.log(10 * this.value)
+  //     // console.log(res.key + " " + res.value);
+  //   });
+  // }
 
 
 }

@@ -2,8 +2,10 @@
 <div class="container">
   <div class="container-inner">
     <div>
-      <h4 class="action-title">{{inputValue}} Доллар США равно</h4>
-      <h2 class="covert-res-title">{{result}} Украинская гривна</h2>
+<!--      <h4 class="action-title">{{inputValue}} Доллар США равно</h4>-->
+<!--      <h2 class="covert-res-title">{{result}} Украинская гривна</h2>-->
+      <h4 class="action-title">{{inputValue}} - {{from}} равно</h4>
+      <h2 class="covert-res-title">{{result}} - {{to}}</h2>
 
       <div class="form-group">
         <mat-form-field class="example-full-width form-control" appearance="fill">
@@ -188,7 +190,7 @@
       <div class="form-group">
         <mat-form-field class="example-full-width form-control" appearance="fill">
           <mat-label>Value 2</mat-label>
-          <input [ngModel]="result" matInput #value2 placeholder="Value 1" value="2" (input)="convert()">
+          <input readonly [ngModel]="result" matInput #value2 placeholder="Value 1" value="2" (input)="convert()">
           <mat-hint align="end">{{value2.value.length}}</mat-hint>
         </mat-form-field>
         <mat-form-field class="form-control" appearance="fill">
