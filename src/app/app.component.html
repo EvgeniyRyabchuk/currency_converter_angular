@@ -1,0 +1,380 @@
+
+<div class="container">
+  <div class="container-inner">
+    <div>
+      <h4 class="action-title">{{inputValue}} Доллар США равно</h4>
+      <h2 class="covert-res-title">{{result}} Украинская гривна</h2>
+
+      <div class="form-group">
+        <mat-form-field class="example-full-width form-control" appearance="fill">
+          <mat-label>Value 1</mat-label>
+          <input [(ngModel)]="inputValue" matInput #value1 placeholder="Value 1" value="1" (input)="convert()">
+          <mat-hint align="end">{{value1.value.length}}</mat-hint>
+        </mat-form-field>
+        <mat-form-field class="form-control" appearance="fill">
+          <mat-label>Choose an option</mat-label>
+          <mat-select #fromSelect [(ngModel)]="from" (selectionChange)="convert()">
+            <mat-option value="AED">AED</mat-option>
+            <mat-option value="AFN">AFN</mat-option>
+            <mat-option value="ALL">ALL</mat-option>
+            <mat-option value="AMD">AMD</mat-option>
+            <mat-option value="ANG">ANG</mat-option>
+            <mat-option value="AOA">AOA</mat-option>
+            <mat-option value="ARS">ARS</mat-option>
+            <mat-option value="AUD">AUD</mat-option>
+            <mat-option value="AWG">AWG</mat-option>
+            <mat-option value="AZN">AZN</mat-option>
+            <mat-option value="BAM">BAM</mat-option>
+            <mat-option value="BBD">BBD</mat-option>
+            <mat-option value="BDT">BDT</mat-option>
+            <mat-option value="BGN">BGN</mat-option>
+            <mat-option value="BHD">BHD</mat-option>
+            <mat-option value="BIF">BIF</mat-option>
+            <mat-option value="BMD">BMD</mat-option>
+            <mat-option value="BND">BND</mat-option>
+            <mat-option value="BOB">BOB</mat-option>
+            <mat-option value="BRL">BRL</mat-option>
+            <mat-option value="BSD">BSD</mat-option>
+            <mat-option value="BTC">BTC</mat-option>
+            <mat-option value="BTN">BTN</mat-option>
+            <mat-option value="BWP">BWP</mat-option>
+            <mat-option value="BYN">BYN</mat-option>
+            <mat-option value="BYR">BYR</mat-option>
+            <mat-option value="BZD">BZD</mat-option>
+            <mat-option value="CAD">CAD</mat-option>
+            <mat-option value="CDF">CDF</mat-option>
+            <mat-option value="CHF">CHF</mat-option>
+            <mat-option value="CLF">CLF</mat-option>
+            <mat-option value="CLP">CLP</mat-option>
+            <mat-option value="CNY">CNY</mat-option>
+            <mat-option value="COP">COP</mat-option>
+            <mat-option value="CRC">CRC</mat-option>
+            <mat-option value="CUC">CUC</mat-option>
+            <mat-option value="CUP">CUP</mat-option>
+            <mat-option value="CVE">CVE</mat-option>
+            <mat-option value="CZK">CZK</mat-option>
+            <mat-option value="DJF">DJF</mat-option>
+            <mat-option value="DKK">DKK</mat-option>
+            <mat-option value="DOP">DOP</mat-option>
+            <mat-option value="DZD">DZD</mat-option>
+            <mat-option value="EGP">EGP</mat-option>
+            <mat-option value="ERN">ERN</mat-option>
+            <mat-option value="ETB">ETB</mat-option>
+            <mat-option value="EUR">EUR</mat-option>
+            <mat-option value="FJD">FJD</mat-option>
+            <mat-option value="FKP">FKP</mat-option>
+            <mat-option value="GBP">GBP</mat-option>
+            <mat-option value="GEL">GEL</mat-option>
+            <mat-option value="GGP">GGP</mat-option>
+            <mat-option value="GHS">GHS</mat-option>
+            <mat-option value="GIP">GIP</mat-option>
+            <mat-option value="GMD">GMD</mat-option>
+            <mat-option value="GNF">GNF</mat-option>
+            <mat-option value="GTQ">GTQ</mat-option>
+            <mat-option value="GYD">GYD</mat-option>
+            <mat-option value="HKD">HKD</mat-option>
+            <mat-option value="HNL">HNL</mat-option>
+            <mat-option value="HRK">HRK</mat-option>
+            <mat-option value="HTG">HTG</mat-option>
+            <mat-option value="HUF">HUF</mat-option>
+            <mat-option value="IDR">IDR</mat-option>
+            <mat-option value="ILS">ILS</mat-option>
+            <mat-option value="IMP">IMP</mat-option>
+            <mat-option value="INR">INR</mat-option>
+            <mat-option value="IQD">IQD</mat-option>
+            <mat-option value="IRR">IRR</mat-option>
+            <mat-option value="ISK">ISK</mat-option>
+            <mat-option value="JEP">JEP</mat-option>
+            <mat-option value="JMD">JMD</mat-option>
+            <mat-option value="JOD">JOD</mat-option>
+            <mat-option value="JPY">JPY</mat-option>
+            <mat-option value="KES">KES</mat-option>
+            <mat-option value="KGS">KGS</mat-option>
+            <mat-option value="KHR">KHR</mat-option>
+            <mat-option value="KMF">KMF</mat-option>
+            <mat-option value="KPW">KPW</mat-option>
+            <mat-option value="KRW">KRW</mat-option>
+            <mat-option value="KWD">KWD</mat-option>
+            <mat-option value="KYD">KYD</mat-option>
+            <mat-option value="KZT">KZT</mat-option>
+            <mat-option value="LAK">LAK</mat-option>
+            <mat-option value="LBP">LBP</mat-option>
+            <mat-option value="LKR">LKR</mat-option>
+            <mat-option value="LRD">LRD</mat-option>
+            <mat-option value="LSL">LSL</mat-option>
+            <mat-option value="LVL">LVL</mat-option>
+            <mat-option value="LYD">LYD</mat-option>
+            <mat-option value="MAD">MAD</mat-option>
+            <mat-option value="MDL">MDL</mat-option>
+            <mat-option value="MGA">MGA</mat-option>
+            <mat-option value="MKD">MKD</mat-option>
+            <mat-option value="MMK">MMK</mat-option>
+            <mat-option value="MNT">MNT</mat-option>
+            <mat-option value="MOP">MOP</mat-option>
+            <mat-option value="MRO">MRO</mat-option>
+            <mat-option value="MUR">MUR</mat-option>
+            <mat-option value="MVR">MVR</mat-option>
+            <mat-option value="MWK">MWK</mat-option>
+            <mat-option value="MXN">MXN</mat-option>
+            <mat-option value="MYR">MYR</mat-option>
+            <mat-option value="MZN">MZN</mat-option>
+            <mat-option value="NAD">NAD</mat-option>
+            <mat-option value="NGN">NGN</mat-option>
+            <mat-option value="NIO">NIO</mat-option>
+            <mat-option value="NOK">NOK</mat-option>
+            <mat-option value="NPR">NPR</mat-option>
+            <mat-option value="NZD">NZD</mat-option>
+            <mat-option value="OMR">OMR</mat-option>
+            <mat-option value="PAB">PAB</mat-option>
+            <mat-option value="PEN">PEN</mat-option>
+            <mat-option value="PGK">PGK</mat-option>
+            <mat-option value="PHP">PHP</mat-option>
+            <mat-option value="PKR">PKR</mat-option>
+            <mat-option value="PLN">PLN</mat-option>
+            <mat-option value="PYG">PYG</mat-option>
+            <mat-option value="QAR">QAR</mat-option>
+            <mat-option value="RON">RON</mat-option>
+            <mat-option value="RSD">RSD</mat-option>
+            <mat-option value="RUB">RUB</mat-option>
+            <mat-option value="RWF">RWF</mat-option>
+            <mat-option value="SAR">SAR</mat-option>
+            <mat-option value="SBD">SBD</mat-option>
+            <mat-option value="SCR">SCR</mat-option>
+            <mat-option value="SDG">SDG</mat-option>
+            <mat-option value="SEK">SEK</mat-option>
+            <mat-option value="SGD">SGD</mat-option>
+            <mat-option value="SHP">SHP</mat-option>
+            <mat-option value="SLL">SLL</mat-option>
+            <mat-option value="SOS">SOS</mat-option>
+            <mat-option value="SRD">SRD</mat-option>
+            <mat-option value="STD">STD</mat-option>
+            <mat-option value="SVC">SVC</mat-option>
+            <mat-option value="SYP">SYP</mat-option>
+            <mat-option value="SZL">SZL</mat-option>
+            <mat-option value="THB">THB</mat-option>
+            <mat-option value="TJS">TJS</mat-option>
+            <mat-option value="TMT">TMT</mat-option>
+            <mat-option value="TND">TND</mat-option>
+            <mat-option value="TOP">TOP</mat-option>
+            <mat-option value="TRY">TRY</mat-option>
+            <mat-option value="TTD">TTD</mat-option>
+            <mat-option value="TWD">TWD</mat-option>
+            <mat-option value="TZS">TZS</mat-option>
+            <mat-option value="UAH">UAH</mat-option>
+            <mat-option value="UGX">UGX</mat-option>
+            <mat-option value="USD" selected="">USD</mat-option>
+            <mat-option value="UYU">UYU</mat-option>
+            <mat-option value="UZS">UZS</mat-option>
+            <mat-option value="VEF">VEF</mat-option>
+            <mat-option value="VND">VND</mat-option>
+            <mat-option value="VUV">VUV</mat-option>
+            <mat-option value="WST">WST</mat-option>
+            <mat-option value="XAF">XAF</mat-option>
+            <mat-option value="XAG">XAG</mat-option>
+            <mat-option value="XCD">XCD</mat-option>
+            <mat-option value="XDR">XDR</mat-option>
+            <mat-option value="XOF">XOF</mat-option>
+            <mat-option value="XPF">XPF</mat-option>
+            <mat-option value="YER">YER</mat-option>
+            <mat-option value="ZAR">ZAR</mat-option>
+            <mat-option value="ZMK">ZMK</mat-option>
+            <mat-option value="ZMW">ZMW</mat-option>
+            <mat-option value="ZWL">ZWL</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+      </div>
+
+      <div class="form-group">
+        <mat-form-field class="example-full-width form-control" appearance="fill">
+          <mat-label>Value 2</mat-label>
+          <input [ngModel]="result" matInput #value2 placeholder="Value 1" value="2" (input)="convert()">
+          <mat-hint align="end">{{value2.value.length}}</mat-hint>
+        </mat-form-field>
+        <mat-form-field class="form-control" appearance="fill">
+          <mat-label>Choose an option</mat-label>
+          <mat-select #toSelect [(ngModel)]="to" (selectionChange)="convert()">
+            <mat-option value="AED">AED</mat-option>
+            <mat-option value="AFN">AFN</mat-option>
+            <mat-option value="ALL">ALL</mat-option>
+            <mat-option value="AMD">AMD</mat-option>
+            <mat-option value="ANG">ANG</mat-option>
+            <mat-option value="AOA">AOA</mat-option>
+            <mat-option value="ARS">ARS</mat-option>
+            <mat-option value="AUD">AUD</mat-option>
+            <mat-option value="AWG">AWG</mat-option>
+            <mat-option value="AZN">AZN</mat-option>
+            <mat-option value="BAM">BAM</mat-option>
+            <mat-option value="BBD">BBD</mat-option>
+            <mat-option value="BDT">BDT</mat-option>
+            <mat-option value="BGN">BGN</mat-option>
+            <mat-option value="BHD">BHD</mat-option>
+            <mat-option value="BIF">BIF</mat-option>
+            <mat-option value="BMD">BMD</mat-option>
+            <mat-option value="BND">BND</mat-option>
+            <mat-option value="BOB">BOB</mat-option>
+            <mat-option value="BRL">BRL</mat-option>
+            <mat-option value="BSD">BSD</mat-option>
+            <mat-option value="BTC">BTC</mat-option>
+            <mat-option value="BTN">BTN</mat-option>
+            <mat-option value="BWP">BWP</mat-option>
+            <mat-option value="BYN">BYN</mat-option>
+            <mat-option value="BYR">BYR</mat-option>
+            <mat-option value="BZD">BZD</mat-option>
+            <mat-option value="CAD">CAD</mat-option>
+            <mat-option value="CDF">CDF</mat-option>
+            <mat-option value="CHF">CHF</mat-option>
+            <mat-option value="CLF">CLF</mat-option>
+            <mat-option value="CLP">CLP</mat-option>
+            <mat-option value="CNY">CNY</mat-option>
+            <mat-option value="COP">COP</mat-option>
+            <mat-option value="CRC">CRC</mat-option>
+            <mat-option value="CUC">CUC</mat-option>
+            <mat-option value="CUP">CUP</mat-option>
+            <mat-option value="CVE">CVE</mat-option>
+            <mat-option value="CZK">CZK</mat-option>
+            <mat-option value="DJF">DJF</mat-option>
+            <mat-option value="DKK">DKK</mat-option>
+            <mat-option value="DOP">DOP</mat-option>
+            <mat-option value="DZD">DZD</mat-option>
+            <mat-option value="EGP">EGP</mat-option>
+            <mat-option value="ERN">ERN</mat-option>
+            <mat-option value="ETB">ETB</mat-option>
+            <mat-option value="EUR">EUR</mat-option>
+            <mat-option value="FJD">FJD</mat-option>
+            <mat-option value="FKP">FKP</mat-option>
+            <mat-option value="GBP">GBP</mat-option>
+            <mat-option value="GEL">GEL</mat-option>
+            <mat-option value="GGP">GGP</mat-option>
+            <mat-option value="GHS">GHS</mat-option>
+            <mat-option value="GIP">GIP</mat-option>
+            <mat-option value="GMD">GMD</mat-option>
+            <mat-option value="GNF">GNF</mat-option>
+            <mat-option value="GTQ">GTQ</mat-option>
+            <mat-option value="GYD">GYD</mat-option>
+            <mat-option value="HKD">HKD</mat-option>
+            <mat-option value="HNL">HNL</mat-option>
+            <mat-option value="HRK">HRK</mat-option>
+            <mat-option value="HTG">HTG</mat-option>
+            <mat-option value="HUF">HUF</mat-option>
+            <mat-option value="IDR">IDR</mat-option>
+            <mat-option value="ILS">ILS</mat-option>
+            <mat-option value="IMP">IMP</mat-option>
+            <mat-option value="INR">INR</mat-option>
+            <mat-option value="IQD">IQD</mat-option>
+            <mat-option value="IRR">IRR</mat-option>
+            <mat-option value="ISK">ISK</mat-option>
+            <mat-option value="JEP">JEP</mat-option>
+            <mat-option value="JMD">JMD</mat-option>
+            <mat-option value="JOD">JOD</mat-option>
+            <mat-option value="JPY">JPY</mat-option>
+            <mat-option value="KES">KES</mat-option>
+            <mat-option value="KGS">KGS</mat-option>
+            <mat-option value="KHR">KHR</mat-option>
+            <mat-option value="KMF">KMF</mat-option>
+            <mat-option value="KPW">KPW</mat-option>
+            <mat-option value="KRW">KRW</mat-option>
+            <mat-option value="KWD">KWD</mat-option>
+            <mat-option value="KYD">KYD</mat-option>
+            <mat-option value="KZT">KZT</mat-option>
+            <mat-option value="LAK">LAK</mat-option>
+            <mat-option value="LBP">LBP</mat-option>
+            <mat-option value="LKR">LKR</mat-option>
+            <mat-option value="LRD">LRD</mat-option>
+            <mat-option value="LSL">LSL</mat-option>
+            <mat-option value="LVL">LVL</mat-option>
+            <mat-option value="LYD">LYD</mat-option>
+            <mat-option value="MAD">MAD</mat-option>
+            <mat-option value="MDL">MDL</mat-option>
+            <mat-option value="MGA">MGA</mat-option>
+            <mat-option value="MKD">MKD</mat-option>
+            <mat-option value="MMK">MMK</mat-option>
+            <mat-option value="MNT">MNT</mat-option>
+            <mat-option value="MOP">MOP</mat-option>
+            <mat-option value="MRO">MRO</mat-option>
+            <mat-option value="MUR">MUR</mat-option>
+            <mat-option value="MVR">MVR</mat-option>
+            <mat-option value="MWK">MWK</mat-option>
+            <mat-option value="MXN">MXN</mat-option>
+            <mat-option value="MYR">MYR</mat-option>
+            <mat-option value="MZN">MZN</mat-option>
+            <mat-option value="NAD">NAD</mat-option>
+            <mat-option value="NGN">NGN</mat-option>
+            <mat-option value="NIO">NIO</mat-option>
+            <mat-option value="NOK">NOK</mat-option>
+            <mat-option value="NPR">NPR</mat-option>
+            <mat-option value="NZD">NZD</mat-option>
+            <mat-option value="OMR">OMR</mat-option>
+            <mat-option value="PAB">PAB</mat-option>
+            <mat-option value="PEN">PEN</mat-option>
+            <mat-option value="PGK">PGK</mat-option>
+            <mat-option value="PHP">PHP</mat-option>
+            <mat-option value="PKR">PKR</mat-option>
+            <mat-option value="PLN">PLN</mat-option>
+            <mat-option value="PYG">PYG</mat-option>
+            <mat-option value="QAR">QAR</mat-option>
+            <mat-option value="RON">RON</mat-option>
+            <mat-option value="RSD">RSD</mat-option>
+            <mat-option value="RUB">RUB</mat-option>
+            <mat-option value="RWF">RWF</mat-option>
+            <mat-option value="SAR">SAR</mat-option>
+            <mat-option value="SBD">SBD</mat-option>
+            <mat-option value="SCR">SCR</mat-option>
+            <mat-option value="SDG">SDG</mat-option>
+            <mat-option value="SEK">SEK</mat-option>
+            <mat-option value="SGD">SGD</mat-option>
+            <mat-option value="SHP">SHP</mat-option>
+            <mat-option value="SLL">SLL</mat-option>
+            <mat-option value="SOS">SOS</mat-option>
+            <mat-option value="SRD">SRD</mat-option>
+            <mat-option value="STD">STD</mat-option>
+            <mat-option value="SVC">SVC</mat-option>
+            <mat-option value="SYP">SYP</mat-option>
+            <mat-option value="SZL">SZL</mat-option>
+            <mat-option value="THB">THB</mat-option>
+            <mat-option value="TJS">TJS</mat-option>
+            <mat-option value="TMT">TMT</mat-option>
+            <mat-option value="TND">TND</mat-option>
+            <mat-option value="TOP">TOP</mat-option>
+            <mat-option value="TRY">TRY</mat-option>
+            <mat-option value="TTD">TTD</mat-option>
+            <mat-option value="TWD">TWD</mat-option>
+            <mat-option value="TZS">TZS</mat-option>
+            <mat-option value="UAH">UAH</mat-option>
+            <mat-option value="UGX">UGX</mat-option>
+            <mat-option value="USD" selected="">USD</mat-option>
+            <mat-option value="UYU">UYU</mat-option>
+            <mat-option value="UZS">UZS</mat-option>
+            <mat-option value="VEF">VEF</mat-option>
+            <mat-option value="VND">VND</mat-option>
+            <mat-option value="VUV">VUV</mat-option>
+            <mat-option value="WST">WST</mat-option>
+            <mat-option value="XAF">XAF</mat-option>
+            <mat-option value="XAG">XAG</mat-option>
+            <mat-option value="XCD">XCD</mat-option>
+            <mat-option value="XDR">XDR</mat-option>
+            <mat-option value="XOF">XOF</mat-option>
+            <mat-option value="XPF">XPF</mat-option>
+            <mat-option value="YER">YER</mat-option>
+            <mat-option value="ZAR">ZAR</mat-option>
+            <mat-option value="ZMK">ZMK</mat-option>
+            <mat-option value="ZMW">ZMW</mat-option>
+            <mat-option value="ZWL">ZWL</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+    </div>
+    <div></div>
+
+
+  </div>
+</div>
+
+
+<!--<button (click)="getValue()">Получить</button>-->
+
+
+
+
+
